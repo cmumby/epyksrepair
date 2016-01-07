@@ -1,0 +1,96 @@
+---
+# To install a base LAMP stack enable "mysql, apache, php"
+# From there, enable any other tools your project requires.
+
+# TODO: To install a base MEAN stack enable "mongodb, express, angular, nodejs"
+# From there, enable any other tools your project requires.
+
+# To install a starter site and the dependant stack, simply enable your
+# desired tool such as "drupal", "wordpress", "laravel", "symfony", etc...
+
+# apt-get update and some basic tools required elsewhere
+- include: common.yml
+
+# Include your private SSH key in the VM
+- include: ssh.yml
+
+# Git and your private .gitconfig in the VM
+- include: git.yml
+
+# Additional Tools
+- include: nodejs.yml # Includes npm
+
+# Database
+- include: mysql.yml
+# - include: mariadb.yml
+# - include: percona.yml
+# - include: mongodb.yml
+
+# Web Server
+- include: apache.yml
+# - include: nginx.yml # TODO
+
+# Project Language (PHP)
+- include: php.yml
+# - include: php-fpm.yml # TODO
+# - include: composer.yml
+
+# Project Language (Ruby)
+# - include: bundler.yml
+
+# Cacheing Layers
+# - include: memcached.yml
+# - include: redis.yml
+# - include: varnish.yml
+
+# Background Job Queue
+# -include: resque.yaml # TODO
+
+# Search Engine
+# - include: solr.yml # TODO
+
+# Drupal and Tools
+# - include: drush.yml
+# - include: acquia_insight.yml
+# - include: drupal7.yml # Disable after first run to not overwrite everytime
+# - include: drupal_console.yml
+# - include: drupal8.yml # Disable after first run to not overwrite everytime
+
+# Wordpress and Tools
+# - include: wordpress.yml # TODO
+
+# Laravel and Tools
+# - include: laravel.yml # TODO
+
+# Symfony and Tools
+# - include: symfony.yml
+
+# Front End UI Theming Tools
+# - include: sass.yml
+# - include: gulp.yml
+# - include: grunt.yml
+# - include: bower.yml
+# - include: yeoman.yml
+# - include: browsersync.yml
+
+# QA Tools
+# - include: wraith.yml # TODO
+# - include: phpqa.yml # TODO
+# - include: jasmine.yml # TODO
+
+# Project Documentation Tools
+# - include: mkdocs.yml
+# - include: phpdocumentor.yml # TODO
+# - include: jekyll.yml
+
+# TODO: Local admin tools to provide admin and analytics in vm
+# TODO: Put these in an admin dir that is gitignored?
+# - include: phpmyadmin.yml # TODO
+# - include: memcachedadmin.yml # TODO
+# - include: redis-commander.yml
+# - include: redis-stat.yml # TODO
+# - include: webgrind.yml # TODO
+# - include: phing.yml # TODO
+
+# Project Site Configuration (any special configs)
+- include: project.yml
