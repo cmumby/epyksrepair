@@ -20,9 +20,9 @@
     - php5-mysqlnd
     - php5-pspell
     - php5-recode
-#    - php5-redis
+    - php5-redis
     - php5-xdebug
-#    - php5-xhprof
+    - php5-xhprof
     - php5-xmlrpc
     - php5-xsl
     - libgv-php5
@@ -44,11 +44,6 @@
   tags:
     - php
 
-#- name: Create mods-available Directory
-#  command: mkdir /etc/php5/mods-available
-#  tags:
-#    - php
-
 - name: Configure PHP Xdebug
   template: src=../templates/xdebug.ini.j2 dest=/etc/php5/mods-available/xdebug.ini
   tags:
@@ -59,15 +54,15 @@
   tags:
     - php
 
-#- name: Configure PHP XHprof
-#  template: src=../templates/xhprof.ini.j2 dest=/etc/php5/mods-available/xhprof.ini
-#  tags:
-#    - php
+- name: Configure PHP XHprof
+  template: src=../templates/xhprof.ini.j2 dest=/etc/php5/mods-available/xhprof.ini
+  tags:
+    - php
 
-#- name: Enable PHP XHprof
-#  command: php5enmod xhprof
-#  tags:
-#    - php
+- name: Enable PHP XHprof
+  command: php5enmod xhprof
+  tags:
+    - php
 
 - name: Configure PHP Opcache
   template: src=../templates/opcache.ini.j2 dest=/etc/php5/mods-available/opcache.ini
@@ -83,6 +78,11 @@
   get_url: url=https://raw.github.com/rlerdorf/opcache-status/master/opcache.php dest={{ project_docroot }}
   tags:
     - php
+
+- name: Enable Mcrypt
+  command: php5enmod mcrypt
+  tags:
+    - apache
 
 - name: Restart Apache
   service: name=apache2 state=restarted

@@ -23,6 +23,15 @@
     Allow from all
 
     DirectoryIndex index.php index.html
+
+    # Handle Front Controller...
+    RewriteEngine On
+
+    RewriteRule ^/$ public/index.php [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ public/index.php [L]
   </Directory>
 
 	# Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
