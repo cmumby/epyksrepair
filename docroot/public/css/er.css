@@ -1,1 +1,7 @@
 .navbar-inner{min-height: 80px;}
+#footer{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+}
