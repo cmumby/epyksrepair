@@ -41,7 +41,7 @@
                 <h2><a id="logo-text" class="pull-left" href="index.html">[ER]</a></h2>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <!--li><a href="about-us.html">About Us</a></li-->
                         <li class="active"><a href="{{URL::asset('services')}}">Services</a></li>
                         <li><a href="{{URL::asset('services')}}">Technicians</a></li>
@@ -60,7 +60,7 @@
                                 <li><a href="terms.html">Terms of Use</a></li>
                             </ul>
                         </li-->
-                        <li><a href="blog.html">Blog</a></li> 
+                        <!--li><a href="blog.html">Blog</a></li--> 
                         <li><a href="contact-us.html">Contact</a></li>
                         <li class="login">
                             <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i></a>

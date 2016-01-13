@@ -15,7 +15,11 @@
             {{ Form::label('Full Name') }}
             {{ Form::text('name', Input::old('name'), array('class'=>"input-block-level", "placeholder"=>"Your Full Name","required"=>"required")) }}
             {{ Form::label('Phone') }}
-            {{ Form::text('phone', Input::old('phone'), array('class'=>"input-block-level", "placeholder"=>"Your Phone Number","required"=>"required")) }}
+            {{ Form::text('phone', Input::old('phone'), array('class'=>"input-block-level", "placeholder"=>"Your Phone Number")) }}
+            {{ Form::label('Email') }}
+            {{ Form::text('email', Input::old('name'), array('class'=>"input-block-level", "placeholder"=>"Your Email Address","required"=>"required")) }}
+         </div>
+         <div class="span7">
             {{ Form::label('Appliance') }}
             <div class="dropdown appliance-dropdown">
                <button class="uneditable-input input-block-level btn btn-default dropdown-toggle appliance-toggle" type="button" data-toggle="dropdown">Choose an Appliance
@@ -26,20 +30,16 @@
                   <li><a href="#">Microwave</a></li>
                   <li><a href="#">Washer/Dryer</a></li>
                   <li><a href="#">Dishwasher</a></li>
-                  <li class="disabled"><a href="#">CSS</a></li>
-                  <li><a href="#">JavaScript</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">About Us</a></li>
                </ul>
             </div>
             {{ Form::hidden('appliance',Input::old('appliance')) }}
-            <label>Last Name</label>
-            <input type="text" class="input-block-level" required="required" placeholder="Your Last Name">
-            <label>Email Address</label>
-            <input type="text" class="input-block-level" required="required" placeholder="Your email address">
+            {{ Form::label('Model') }}
+            {{ Form::text('model', Input::old('name'), array('class'=>"input-block-level", "placeholder"=>"Model Number","required"=>"required")) }}
+            {{ Form::label('Serial') }}
+            {{ Form::text('serial', Input::old('name'), array('class'=>"input-block-level", "placeholder"=>"Serial Number",)) }}
          </div>
-         <div class="span7">
-            <label>Message</label>
+         <div class="span12 appliance-message">
+         <label>Message</label>
             <textarea name="message" id="message" required="required" class="input-block-level" rows="8"></textarea>
          </div>
       </div>

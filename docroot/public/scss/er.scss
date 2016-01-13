@@ -6,6 +6,9 @@ html,body {
 	
 	/* Wrapper for page content to push down footer */
 	#wrap {
+		section.title{
+			padding:0;
+		}
 		.dropdown-menu {
 		    margin-top: -1px;
 		    min-width: 228px;
@@ -16,6 +19,10 @@ html,body {
 		/* Negative indent footer by it's height */
 		margin: 0 auto -50px;
 		#service-container { 
+			textarea#message {
+			    padding: 10px 15px;
+			    height: 100px;
+			}
 			padding-top: 20px;
 			h2.form-title{
 				margin-top:0;
@@ -24,8 +31,12 @@ html,body {
 				button{
 					background-color: #FFFFFF;
 					text-align: left;
+					margin-bottom: 10px;
 				}
 				
+			}
+			.appliance-message{
+				margin:0;
 			}
 
 		}
