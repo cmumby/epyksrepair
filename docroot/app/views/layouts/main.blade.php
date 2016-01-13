@@ -29,8 +29,8 @@
 
 <body>
     <div id="wrap">
-    <!--Header navbar-fixed-top-->
-    <header class="navbar">
+    <!--Header -->
+    <header class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -42,10 +42,10 @@
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
+                        <!--li><a href="about-us.html">About Us</a></li-->
                         <li class="active"><a href="{{URL::asset('services')}}">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li class="dropdown">
+                        <li><a href="{{URL::asset('services')}}">Technicians</a></li>
+                        <!-- li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="career.html">Career</a></li>
@@ -59,7 +59,7 @@
                                 <li><a href="privacy.html">Privacy Policy</a></li>
                                 <li><a href="terms.html">Terms of Use</a></li>
                             </ul>
-                        </li>
+                        </li-->
                         <li><a href="blog.html">Blog</a></li> 
                         <li><a href="contact-us.html">Contact</a></li>
                         <li class="login">

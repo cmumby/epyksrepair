@@ -1,35 +1,41 @@
-.navbar-inner{min-height: 50px;}
-
-
-html,body {
-	height: 100%;
-	/* The html and body elements cannot have any padding or margin. */
-	
-	padding:0;
+.navbar-inner {
+  min-height: 80px;
 }
-
-/* Wrapper for page content to push down footer */
-#wrap {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-/* Negative indent footer by it's height */
-margin: 0 auto -50px;
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+  /* Wrapper for page content to push down footer */
+  /* Set the fixed height of the footer here */
 }
-
-/* Set the fixed height of the footer here */
-#push,#footer {
-	height: 50px;
-	
+html #wrap, body #wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -50px;
 }
-
-
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-	#footer {
-	  margin-left: -20px;
-	  margin-right: -20px;
-	  padding-left: 20px;
-	  padding-right: 20px;
-	}
+html #wrap .dropdown-menu, body #wrap .dropdown-menu {
+  margin-top: -1px;
+  min-width: 228px;
+}
+html #wrap #service-container, body #wrap #service-container {
+  padding-top: 20px;
+}
+html #wrap #service-container h2.form-title, body #wrap #service-container h2.form-title {
+  margin-top: 0;
+}
+html #wrap #service-container .appliance-dropdown button, body #wrap #service-container .appliance-dropdown button {
+  background-color: #fff;
+  text-align: left;
+}
+html #push, body #push, html #footer, body #footer {
+  height: 50px;
+}
+/* Lastly, apply responsive CSS fixes as necessary */@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

@@ -17,6 +17,12 @@ jQuery(function($) {
 			 scrollTop: $("body").offset().top
 		 }, 500);
 	});	
-	//End goto top		
+	//End goto top
+
+	$('.dropdown-menu li a').click(function(event){
+		 event.preventDefault();
+		 $('.appliance-toggle').text($(this).text());
+		 $('input[name=appliance]').val($(this).text());
+	})		
 
 });
