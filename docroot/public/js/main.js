@@ -21,7 +21,7 @@ jQuery(function($) {
 
 	$('.dropdown-menu li a').click(function(event){
 		 event.preventDefault();
-		 $('.appliance-toggle').text($(this).text());
+		  $(this).parent().parent().parent().find('button').text($(this).text());
 		 $('input[name=appliance]').val($(this).text());
 	})		
 
