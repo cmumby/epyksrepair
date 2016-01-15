@@ -17,3 +17,5 @@ Route::get('/', function()
 });
 
 Route::get('services', 'ServiceController@scheduleForm');
+
+Route::get('technicians', 'TechController@showTechs');
