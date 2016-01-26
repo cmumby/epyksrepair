@@ -34,11 +34,24 @@
             </div>
             {{ Form::hidden('appliance',Input::old('appliance')) }}
             {{ Form::label('Model') }}
-            {{ Form::text('model', Input::old('name'), array('class'=>"input-block-level", "placeholder"=>"Model Number","required"=>"required")) }}
-            {{ Form::label('Serial') }}
-            {{ Form::text('serial', Input::old('name'), array('class'=>"input-block-level", "placeholder"=>"Serial Number",)) }}
+            {{ Form::text('model', Input::old('name'), array('class'=>"input-block-level", "placeholder"=>"Model Number","required"=>"required")) }}  
+            {{ Form::label('Make/Brand') }}
+            <div class="dropdown appliance-dropdown">
+                  <button class="uneditable-input input-block-level btn btn-default dropdown-toggle appliance-toggle" type="button" data-toggle="dropdown">Choose an Appliance
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                     <li><a href="#">Stove/Oven</a></li>
+                     <li><a href="#">Refridgerator</a></li>
+                     <li><a href="#">Microwave</a></li>
+                     <li><a href="#">Washer/Dryer</a></li>
+                     <li><a href="#">Dishwasher</a></li>
+                  </ul>
+            </div>
+            {{ Form::hidden('appliance',Input::old('brand')) }}
          </div>
          <div class="span12 appliance-message">
+            {{ Form::label('Serial') }}
+            {{ Form::text('serial', Input::old('name'), array('class'=>"input-block-level", "placeholder"=>"Serial Number",)) }}
          <label>Message</label>
             <textarea name="message" id="message" required="required" class="input-block-level" rows="8"></textarea>
          </div>

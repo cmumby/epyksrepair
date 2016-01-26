@@ -43,8 +43,8 @@
                     <ul class="nav">
                         <li><a href="/">Home</a></li>
                         <!--li><a href="about-us.html">About Us</a></li-->
-                        <li class="active"><a href="{{URL::asset('services')}}">Services</a></li>
-                        <li><a href="{{URL::asset('services')}}">Technicians</a></li>
+                        <li @if(Route::current()->getUri() == 'services') class="active" @endif><a href="{{URL::asset('services')}}">Services</a></li>
+                        <li @if(Route::current()->getUri() == 'technicians') class="active" @endif><a href="{{URL::asset('technicians')}}">Technicians</a></li>
                         <!-- li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
                             <ul class="dropdown-menu">
